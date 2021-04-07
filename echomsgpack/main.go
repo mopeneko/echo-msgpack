@@ -1,7 +1,6 @@
 package echomsgpack
 
 import (
-	"log"
 	"net/http"
 	"strings"
 
@@ -54,7 +53,6 @@ func (b *Binder) Bind(i interface{}, c echo.Context) error {
 
 	// check content type
 	if !strings.HasPrefix(req.Header.Get(echo.HeaderContentType), mime) {
-		log.Println(req.Header.Get(echo.HeaderContentType))
 		return echo.ErrUnsupportedMediaType
 	}
 
