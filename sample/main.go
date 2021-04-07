@@ -8,10 +8,12 @@ import (
 	"github.com/mopeneko/echo-msgpack/echomsgpack"
 )
 
+// Request of POST /hello
 type Request struct {
 	Name string `msgpack:"name"`
 }
 
+// Response of POST /hello
 type Response struct {
 	Message string `msgpack:"message"`
 }
