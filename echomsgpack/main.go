@@ -66,7 +66,7 @@ func (b *Binder) Bind(i interface{}, c echo.Context) error {
 	return nil
 }
 
-// ContextOverrider wraps context for sending a MessagePack response.
+// ContextWrapper wraps context for sending a MessagePack response.
 func ContextWrapper(next echo.HandlerFunc) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		c = context{c}
